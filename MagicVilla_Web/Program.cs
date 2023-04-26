@@ -1,9 +1,10 @@
 using MagicVilla_Web;
-using MagicVilla_Web.Services.IServices;
+using WEB.Services.IServices;
 using MagicVilla_Web.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using WEB.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
 ﻿using Utility;
-using MagicVilla_Web.Models;
-using MagicVilla_Web.Models.Dto;
-using MagicVilla_Web.Services.IServices;
+using WEB.Models;
+using WEB.Models.Dto;
+using WEB.Services.IServices;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-namespace MagicVilla_Web.Controllers
+namespace WEB.Controllers
 {
     public class AuthController : Controller
     {

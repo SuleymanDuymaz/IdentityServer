@@ -1,11 +1,11 @@
 ﻿using Utility;
-using MagicVilla_Web.Models;
-using MagicVilla_Web.Services.IServices;
+using WEB.Models;
+using WEB.Services.IServices;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace MagicVilla_Web.Services
+namespace WEB.Services
 {
     public class BaseService : IBaseService
     {

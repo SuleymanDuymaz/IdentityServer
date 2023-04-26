@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using Utility;
-using MagicVilla_Web.Models;
-using MagicVilla_Web.Models.Dto;
-using MagicVilla_Web.Services.IServices;
+using WEB.Models;
+using WEB.Models.Dto;
+using WEB.Services.IServices;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
-namespace MagicVilla_Web.Controllers
+namespace WEB.Controllers
 {
     public class HomeController : Controller
     {

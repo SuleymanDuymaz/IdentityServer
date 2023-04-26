@@ -1,6 +1,6 @@
 ﻿using static Utility.SD;
 
-namespace MagicVilla_Web.Models
+namespace WEB.Models
 {
     public class APIRequest
     {

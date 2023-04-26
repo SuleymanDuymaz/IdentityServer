@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Utility;
-using MagicVilla_Web.Models;
-using MagicVilla_Web.Models.Dto;
-using MagicVilla_Web.Models.VM;
-using MagicVilla_Web.Services;
-using MagicVilla_Web.Services.IServices;
+using WEB.Models;
+using WEB.Models.Dto;
+using WEB.Models.VM;
+using WEB.Services;
+using WEB.Services.IServices;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Data;
 
-namespace MagicVilla_Web.Controllers
+namespace WEB.Controllers
 {
     public class VillaNumberController : Controller
     {

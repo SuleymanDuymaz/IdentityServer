@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MagicVilla_Web.Models.Dto;
+using WEB.Models.Dto;
 
 namespace MagicVilla_Web
 {

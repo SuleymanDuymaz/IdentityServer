@@ -1,6 +1,6 @@
-﻿using MagicVilla_Web.Models;
+﻿using WEB.Models;
 
-namespace MagicVilla_Web.Services.IServices
+namespace WEB.Services.IServices
 {
     public interface IBaseService
     {

@@ -1,4 +1,4 @@
-﻿namespace MagicVilla_Web.Models.Dto
+﻿namespace WEB.Models.Dto
 {
     public class UserDTO
     {

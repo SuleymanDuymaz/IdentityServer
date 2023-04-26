@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicVilla_VillaAPI", "MagicVilla_VillaAPI\MagicVilla_VillaAPI.csproj", "{591555FB-96CF-4E42-A20B-F3560F78F347}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicVilla_Web", "MagicVilla_Web\MagicVilla_Web.csproj", "{78CC9AA0-A82E-4D74-8311-5E99BD47E95A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB", "MagicVilla_Web\WEB.csproj", "{78CC9AA0-A82E-4D74-8311-5E99BD47E95A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "MagicVilla_Utility\Utility.csproj", "{C6556F09-1A79-4846-919D-007D2F59DCF7}"
 EndProject

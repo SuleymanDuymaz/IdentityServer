@@ -1,8 +1,9 @@
 ﻿using Utility;
-using MagicVilla_Web.Models;
-using MagicVilla_Web.Models.Dto;
-using MagicVilla_Web.Services.IServices;
+using WEB.Models;
+using WEB.Models.Dto;
+using WEB.Services.IServices;
 using Newtonsoft.Json.Linq;
+using WEB.Services;
 
 namespace MagicVilla_Web.Services
 {
