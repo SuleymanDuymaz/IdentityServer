@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MagicVilla_Utility\MagicVilla_Utility.csproj" />
+    <ProjectReference Include="..\MagicVilla_Utility\Utility.csproj" />
   </ItemGroup>
 
 </Project>
