@@ -1,27 +1,20 @@
-using MagicVilla_Web;
-using WEB.Services.IServices;
-using MagicVilla_Web.Services;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using WEB.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAutoMapper(typeof(MappingConfig));
-
-
-builder.Services.AddHttpClient<IVillaService, VillaService>();
-builder.Services.AddScoped<IVillaService, VillaService>();
-
-builder.Services.AddHttpClient<IVillaNumberService, VillaNumberService>();
-builder.Services.AddScoped<IVillaNumberService, VillaNumberService>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddHttpClient<IAuthService, AuthService>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddDistributedMemoryCache();
+builder.Services.AddControllersWithViews(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
+});
 builder.Services.AddAuthentication
     (options =>
     {
@@ -37,10 +30,10 @@ builder.Services.AddAuthentication
                   options.SlidingExpiration = true;
               })
               .AddOpenIdConnect("oidc", options => {
-                  options.Authority = builder.Configuration["ServiceUrls:IdentityAPI"];
+                  options.Authority = "https://localhost:7003/";
                   options.GetClaimsFromUserInfoEndpoint = true;
-                  options.ClientId = "magic";
-                  options.ClientSecret = "secret";
+                  options.ClientId = "jdmtv7067";
+                  options.ClientSecret = "jdmsecretjdmtv7067";
                   options.ResponseType = "code";
 
                   options.TokenValidationParameters.NameClaimType = "name";
@@ -60,12 +53,6 @@ builder.Services.AddAuthentication
                       }
                   };
               });
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(100);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -80,9 +67,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();
+
 app.UseAuthorization();
-app.UseSession();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

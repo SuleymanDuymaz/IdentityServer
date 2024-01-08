@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WEB.Controllers
 {
@@ -19,7 +20,7 @@ namespace WEB.Controllers
             _villaService = villaService;
             _mapper = mapper;
         }
-
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             List<VillaDTO> list = new();

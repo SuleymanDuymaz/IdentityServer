@@ -17,8 +17,8 @@ namespace MagicVilla_Identity
                 new IdentityResources.Email(),
                 new IdentityResources.Profile(),
             };
-        public static IEnumerable<ApiScope> ApiScopes=>
-        
+        public static IEnumerable<ApiScope> ApiScopes =>
+
             new List<ApiScope>
             {
                 new ApiScope("magic", "Magic Server"),
@@ -27,7 +27,7 @@ namespace MagicVilla_Identity
                 new ApiScope(name: "delete", displayName: "Delete your data.")
             };
 
-        public static IEnumerable<Client> Cleints=>
+        public static IEnumerable<Client> Cleints =>
             new List<Client>
             {
                 new Client
@@ -42,7 +42,7 @@ namespace MagicVilla_Identity
                     ClientId = "magic",
                     ClientSecrets = { new Secret("secret".Sha256()) },
                     AllowedGrantTypes = GrantTypes.Code,
-                    AllowedScopes = { "magic", 
+                    AllowedScopes = { "magic",
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Email,
@@ -50,8 +50,22 @@ namespace MagicVilla_Identity
                     },
                     RedirectUris={ "https://localhost:7002/signin-oidc" },
                     PostLogoutRedirectUris={"https://localhost:7002/signout-callback-oidc" },
+                },
+                    new Client
+                {
+                    ClientId = "jdmtv7067",
+                    ClientSecrets = { new Secret("jdmsecretjdmtv7067".Sha256()) },
+                    AllowedGrantTypes = GrantTypes.Code,
+                    AllowedScopes = { "magic",
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Email,
+                        JwtClaimTypes.Role
+                    },
+                    RedirectUris={ "https://localhost:7067/signin-oidc" },
+                    PostLogoutRedirectUris={"https://localhost:7149/signout-callback-oidc" },
                 }
             };
-        
+
     }
 }

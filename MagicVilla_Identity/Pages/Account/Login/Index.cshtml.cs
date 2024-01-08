@@ -3,7 +3,6 @@ using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
-using Duende.IdentityServer.Test;
 using MagicVilla_Identity.Data;
 using MagicVilla_Identity.Models;
 using Microsoft.AspNetCore.Authentication;

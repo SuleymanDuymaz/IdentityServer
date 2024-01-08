@@ -10,11 +10,11 @@ namespace MagicVilla_Identity.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
 : base(options)
-{
-}
+        {
+        }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
-     
+
     }
 }
